@@ -36,6 +36,11 @@ class BusController extends Controller
     public function store(Request $request)
     {
         //
+        $busno = request("busno");
+        $route = request("route");
+        $driver = request("driver");
+        echo $busno."<br>".$route."<br>".$driver;
+
     }
 
     /**
