@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
-
+use App\Models\FacultyModal;
 
 class FacultyController extends Controller
 {
@@ -42,6 +42,18 @@ class FacultyController extends Controller
         $college =  request("college");
         $contactno = request("contactno");
         echo "faculty name = ".$name."<br>"."designation = ".$designation."<br>"."college = ".$college."<br>"."contact no =".$contactno;
+
+        //pass value to modals by creating model obj
+        $faculty = new FacultyModal();
+        $faculty->fname = $name;
+        $faculty->designation = $designation;
+        $faculty->college = $college;
+        $faculty->contactno = $contactno;
+
+        //saving
+        $faculty->save();
+        
+
     }
 
     /**

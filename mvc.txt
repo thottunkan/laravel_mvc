@@ -1,0 +1,50 @@
+MVC
+=========================
+
+mvc is an architechture/mvvc model-view view controller
+
+view - what the user is interacting/client-side
+Modal - database
+controller - serverside program written in a particular lang
+
+popular
+applied in most of the programmig lang
+
+architechture :- is a std,how to code...etc,
+
+========================================================
+
+controllers dir: app->http->contorllere
+create controller : php artisan make:controlller <controllername> -r
+eg: php artisan make:controller FacultyController -r 
+
+
+create a new faculty create fun will use
+view all the faculty use indexfun
+
+name 
+desg
+cldg
+contact no
+
+when the .env file is changed type the following command
+	php artisan config:cache
+	for clearing the cache
+
+creating modal :
+	php artisan make:model FacultyModal -m
+
+apply our model to our database
+	php artisan migrate
+
+Migration table created successfully.
+Migrating: 2021_04_08_091118_create_faculty_modals_table
+Migrated:  2021_04_08_091118_create_faculty_modals_table (29.00ms)
+Migrating: 2021_04_08_091331_create_bus_modals_table
+Migrated:  2021_04_08_091331_create_bus_modals_table (20.21ms)
+Migrating: 2021_04_08_091546_create_student_modals_table
+Migrated:  2021_04_08_091546_create_student_modals_table (19.39ms)
+PS Z:\ambadinarayan\web\MVC\project1\emp-app> 
+
+for rollbacking migration
+	php artisan migrate:rollback

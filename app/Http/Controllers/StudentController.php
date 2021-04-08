@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\StudentModal;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -41,7 +42,13 @@ class StudentController extends Controller
         $college = request("college");
 
         echo "name =".$name."<br>"."rollno =".$rollno."<br>"."admnno = ".$admnno."<br>"."college =".$college;
+        $student = new StudentModal();
+        $student->stud_name = $name;
+        $student->stud_rollno = $rollno;
+        $student->stud_admnno = $admnno;
+        $student->stud_college = $college;
 
+        $student->save();
     }
 
     /**

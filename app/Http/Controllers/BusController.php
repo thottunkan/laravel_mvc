@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BusModal;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
@@ -41,6 +42,12 @@ class BusController extends Controller
         $driver = request("driver");
         echo "busno =".$busno."<br>"."route = ".$route."<br>"."driver = ".$driver;
 
+        $bus = new BusModal();
+        $bus->busno = $busno;
+        $bus->route = $route;
+        $bus->driver = $driver;
+
+        $bus->save();
     }
 
     /**
