@@ -48,3 +48,9 @@ PS Z:\ambadinarayan\web\MVC\project1\emp-app>
 
 for rollbacking migration
 	php artisan migrate:rollback
+
+booktitlte
+author 
+description
+distributer
+price

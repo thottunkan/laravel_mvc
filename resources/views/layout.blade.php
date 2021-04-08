@@ -30,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/student">STUDENT</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/book">BOOK</a>
+        </li>
         
       </ul>
     </div>
