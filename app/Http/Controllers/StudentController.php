@@ -35,6 +35,13 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
+        $name = request("name");
+        $rollno =request("rollno");
+        $admnno = request("admnno");
+        $college = request("college");
+
+        echo "name =".$name."<br>"."rollno =".$rollno."<br>"."admnno = ".$admnno."<br>"."college =".$college;
+
     }
 
     /**

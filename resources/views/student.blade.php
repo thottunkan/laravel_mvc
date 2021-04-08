@@ -13,6 +13,8 @@
         <div class="container mr-auto" style="margin-top: 100px;">
         
             <table class="table table-borderless">
+                <form action="/studentread" method="POST">
+                {{csrf_field()}}
                 <tr>
                     <td></td>
                     <td>
@@ -23,20 +25,20 @@
                     <td>Name</td>
                     <td>
                     
-                        <input type="text " class="form-control">
+                        <input type="text " name="name" class="form-control">
                     </td>
                 </tr>
                 <tr>
                     <td>Rollno</td>
-                    <td><input type="text " class="form-control"></td>
+                    <td><input type="text " name="rollno" class="form-control"></td>
                 </tr>
                 <tr>
                     <td>Admission no</td>
-                    <td><input type="text " class="form-control"></td>
+                    <td><input type="text " name="admnno" class="form-control"></td>
                 </tr>
                 <tr>
                     <td>College</td>
-                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"  name="college" ></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -47,6 +49,7 @@
                     <td></td>
                 </tr>
             </table>
+            </form>
         </div>
     @endsection
 </body>

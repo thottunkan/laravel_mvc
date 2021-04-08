@@ -39,7 +39,7 @@ class BusController extends Controller
         $busno = request("busno");
         $route = request("route");
         $driver = request("driver");
-        echo $busno."<br>".$route."<br>".$driver;
+        echo "busno =".$busno."<br>"."route = ".$route."<br>"."driver = ".$driver;
 
     }
 

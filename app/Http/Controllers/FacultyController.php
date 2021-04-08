@@ -41,7 +41,7 @@ class FacultyController extends Controller
         $designation = request("designation");
         $college =  request("college");
         $contactno = request("contactno");
-        echo $name."<br>".$designation."<br>".$college."<br>".$contactno;
+        echo "faculty name = ".$name."<br>"."designation = ".$designation."<br>"."college = ".$college."<br>"."contact no =".$contactno;
     }
 
     /**

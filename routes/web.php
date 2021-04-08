@@ -25,3 +25,4 @@ Route::get("/student",[StudentController::class,'create']);
 Route::get("/busadd",[BusController::class,'create']);
 Route::post("facultyread",[FacultyController::class,'store']);
 Route::post("/busread",[BusController::class,'store']);
+Route::post("/studentread",[StudentController::class,'store']);
