@@ -6,6 +6,7 @@
     <div class="container" style="margin-top: 100px;">
         <div class="table">
             <form action="/facultyread" method="POST">
+            {{csrf_field()}} <!-- csrf token for security purpose-->
             <table class="table table-borderless">
                 <tr>
                     <td></td>

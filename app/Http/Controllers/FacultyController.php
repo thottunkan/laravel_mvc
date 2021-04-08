@@ -37,7 +37,11 @@ class FacultyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = request("name");
+        $designation = request("designation");
+        $college =  request("college");
+        $contactno = request("contactno");
+        echo $name."<br>".$designation."<br>".$college."<br>".$contactno;
     }
 
     /**
