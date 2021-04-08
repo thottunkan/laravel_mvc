@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BusController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,4 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get("/", [FacultyController::class,'create']);
 Route::get("/student",[StudentController::class,'create']);
+Route::get("/busadd",[BusController::class,'create']);

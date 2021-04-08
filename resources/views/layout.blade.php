@@ -25,7 +25,7 @@
           <a class="nav-link active" aria-current="page" href="/">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">ABOUT US</a>
+          <a class="nav-link" href="/busadd">ADD BUS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/student">STUDENT</a>
