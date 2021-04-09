@@ -16,8 +16,7 @@ class BookController extends Controller
     public function index()
     {
         //
-        $buses = BusModal::all();
-        return view("viewallbus",compact($buses));
+       
     }
 
     /**

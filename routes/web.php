@@ -31,6 +31,10 @@ Route::get("/viewallbus",[BusController::class,'index']);
 Route::post("/searchfacuty",[FacultyController::class,'searchFaculty']);
 Route::post("/searchBus",[BusController::class,'searchBus']);
 
+
+Route::get("/editviewfaculty/{id}/edit",[FacultyController::class,'edit']);
+Route::get("/editviewfaculty/{id}/update",[FacultyController::class,'update']);
+
 Route::post("/bookread",[BookController::class,'store']);
 Route::post("facultyread",[FacultyController::class,'store']);
 Route::post("/busread",[BusController::class,'store']);

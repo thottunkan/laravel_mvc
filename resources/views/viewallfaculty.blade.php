@@ -5,7 +5,7 @@
 
     <div class="container" style="margin-top: 100px;">
         <div class="row justify-content-end">
-            <div class="col-4">
+            <div class="col-12 col-md-4 com-xm-12 col-sm-12">
                 <div class="">
                 <div class="input-group mb-3">
                             <form action="/searchfacuty" method="POST">
@@ -49,6 +49,7 @@
                     <td>{{$faculty->designation}}</td>
                     <td>{{$faculty->college}}</td>
                     <td>{{$faculty->contactno}}</td>
+                    <td><a class="btn btn-success" href="editviewfaculty/{{$faculty->id}}/edit">Edit</a></td>
                 </tr>
             @endforeach
         </table>

@@ -13,6 +13,9 @@ class FacultyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function editviewfaculty(){
+        return view('editviewfaculty');
+    }
     public function searchFaculty(Request $request){
         $getFacultyName = request("searchfaculty");
         echo "<script>alert(".$getFacultyName.")</script>";
@@ -85,7 +88,11 @@ class FacultyController extends Controller
      */
     public function edit($id)
     {
-        //
+        //passig id and view
+        echo "<script>alert(".$id.")</script>";
+        $faculties = FacultyModal::find($id);
+        echo "<script>alert(".$faculties.")</script>";
+        return view("editviewfaculty",compact('faculties'));
     }
 
     /**
@@ -96,8 +103,24 @@ class FacultyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        $name = request("name");
+        $designation = request("designation");
+        $college =  request("college");
+        $contactno = request("contactno");
+        echo "faculty name = ".$name."<br>"."designation = ".$designation."<br>"."college = ".$college."<br>"."contact no =".$contactno;
+
+        //pass value to modals by creating model obj
+        $faculty = new FacultyModal();
+        $faculty->fname = $name;
+        $faculty->designation = $designation;
+        $faculty->college = $college;
+        $faculty->contactno = $contactno;
         //
+        echo "<script>alert(".$id.")</script>";
+        $faculties = FacultyModal::find($id);
+        echo "<script>alert(".$faculties.")</script>";
+        return view("editviewfaculty",compact('faculties'));
     }
 
     /**
