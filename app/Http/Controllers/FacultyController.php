@@ -13,9 +13,19 @@ class FacultyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function searchFaculty(Request $request){
+        $getFacultyName = request("searchfaculty");
+        echo "<script>alert(".$getFacultyName.")</script>";
+        $faculties = FacultyModal::query()
+        ->where('fname','like',"%{$getFacultyName}%")
+        ->get();
+        return view("viewallfaculty",compact('faculties'));
+    }
     public function index()
     {
-        //
+        $faculties = FacultyModal::all();//load all data from facultymodal 
+        return view("viewallfaculty",compact('faculties'));//[passing the loaded values to viewallfaulty file ]
+        
     }
 
     /**

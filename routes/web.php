@@ -25,6 +25,11 @@ Route::get("/", [FacultyController::class,'create']);
 Route::get("/student",[StudentController::class,'create']);
 Route::get("/busadd",[BusController::class,'create']);
 Route::get("/book",[BookController::class,'create']);
+Route::get("/viewallfaculty",[FacultyController::class,'index']);
+Route::get("/viewallstudents",[StudentController::class,'index']);
+Route::get("/viewallbus",[BusController::class,'index']);
+Route::post("/searchfacuty",[FacultyController::class,'searchFaculty']);
+Route::post("/searchBus",[BusController::class,'searchBus']);
 
 Route::post("/bookread",[BookController::class,'store']);
 Route::post("facultyread",[FacultyController::class,'store']);

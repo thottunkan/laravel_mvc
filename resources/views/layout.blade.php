@@ -22,16 +22,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">HOME</a>
+          <a class="nav-link active" aria-current="page" href="/">ADD FACULTY</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/busadd">ADD BUS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/student">STUDENT</a>
+          <a class="nav-link" href="/student">ADD STUDENT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/book">BOOK</a>
+          <a class="nav-link" href="/book">ADD BOOK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/viewallfaculty">VIEW FACULTIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/viewallstudents">VIEW STUDENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/viewallbus">VIEW BUSES</a>
         </li>
         
       </ul>

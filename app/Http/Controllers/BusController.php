@@ -12,9 +12,17 @@ class BusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function searchBus(Request $request){
+        $getBusName = request("searchbus");
+        $listbus = BusModal::query()
+        ->where('busno','like',"%{$getBusName}%")
+        ->get();
+        return view("viewallbus",compact('listbus'));
+    }
     public function index()
     {
-        //
+        $listbus = BusModal::all();
+        return view("viewallbus",compact('listbus'));
     }
 
     /**

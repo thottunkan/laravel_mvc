@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BookModel;
+use App\Models\BusModal;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -15,6 +16,8 @@ class BookController extends Controller
     public function index()
     {
         //
+        $buses = BusModal::all();
+        return view("viewallbus",compact($buses));
     }
 
     /**

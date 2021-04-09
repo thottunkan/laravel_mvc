@@ -14,7 +14,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $students =  StudentModal::all(); //load all data from student model
+        return view('viewallstudents',compact('students'));//passing to viewallstudents
     }
 
     /**
